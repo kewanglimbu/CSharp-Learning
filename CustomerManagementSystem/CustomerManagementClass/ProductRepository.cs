@@ -20,6 +20,10 @@ namespace CustomerManagement.BL
                 product.CurrentPrice = 2000;
             }
 
+            Object obj = new object();
+            Console.WriteLine($"object: {obj.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
+
             return product;
          
         }
@@ -29,6 +33,7 @@ namespace CustomerManagement.BL
         {
             return true;
         }
+
 
 
     }

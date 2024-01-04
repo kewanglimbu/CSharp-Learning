@@ -22,6 +22,8 @@ namespace CustomerManagement.BL
         public string Description { get; set; }
         public double? CurrentPrice { get; set; }
 
+        public override string ToString() => ProductName;
+        
 
         public bool Validate()
         {
