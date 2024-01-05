@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerManagement.BL
 {
-    public class Product
+    public class Product:EntityBase
     {
         public Product()
         {
@@ -25,7 +25,7 @@ namespace CustomerManagement.BL
         public override string ToString() => ProductName;
         
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if(string.IsNullOrWhiteSpace(ProductName)) isValid = false;

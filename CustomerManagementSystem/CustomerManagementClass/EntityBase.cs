@@ -16,7 +16,11 @@ namespace CustomerManagement.BL
         public EntityStateOption EntityState { get; set; }
         public bool Haschanges { get; set; }
         public bool IsNew { get; private set; }
-        public bool IsValid { get {  return true; } } // here just returning true
+        public bool IsValid => Validate();
+
+        public abstract bool Validate();
+
+
        
     }
 }
