@@ -37,8 +37,57 @@ namespace CustomerManagement.BLTest
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
         }
 
+
+        [TestMethod]
+        public void SaveTestValid()
+        {
+            //--- Arrange 
+
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                ProductName = "Nike Shoes",
+                Description = "Latest Brand Nike Shoe 2024",
+                CurrentPrice = 200,
+                Haschanges = true
+            };
+
+            //--- Act
+
+            var actual = productRepository.Save(updatedProduct);
+
+            //--- Assert
+
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod]
+        public void SaveTestMissingPrice()
+        {
+            //--- Arrange 
+
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                CurrentPrice = null,
+                ProductName = "Nike Shoes",
+                Description = "Latest Brand Nike Shoe 2024",
+                Haschanges = true
+            };
+
+            //--- Act
+
+            var actual = productRepository.Save(updatedProduct);
+
+            //--- Assert
+
+            Assert.AreEqual(false, actual);
+        }
+
+
     }
-        
 }
+        
+
 
 
