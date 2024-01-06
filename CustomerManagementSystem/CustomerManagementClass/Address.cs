@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerManagement.BL
 {
-    public class Address
+    public class Address:EntityBase
     {
         public Address()
         {
@@ -26,7 +26,7 @@ namespace CustomerManagement.BL
         public int AddressType { get; set; }
 
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 

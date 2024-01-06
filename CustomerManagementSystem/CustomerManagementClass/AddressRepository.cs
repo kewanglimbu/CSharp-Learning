@@ -66,5 +66,31 @@ namespace CustomerManagement.BL
 
             return addressList;
         }
-}
+
+        public bool Save(Address address)
+        {
+            var Success = true;
+
+            if (address.Haschanges)
+            {
+                if (address.IsValid)
+                {
+                    if (address.IsNew)
+                    {
+                        //call Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call  an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    Success = false;
+                }
+            }
+
+            return Success;
+        }
+    }
 }

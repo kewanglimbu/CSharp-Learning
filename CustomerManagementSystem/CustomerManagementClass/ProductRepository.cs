@@ -31,7 +31,28 @@ namespace CustomerManagement.BL
 
         public bool Save(Product product)
         {
-            return true;
+            var Success = true;
+
+            if(product.Haschanges)
+            {
+                if(product.IsValid)
+                {
+                    if(product.IsNew)
+                    {
+                        //call Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call  an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    Success=false;
+                }
+            }
+
+            return Success;
         }
 
 

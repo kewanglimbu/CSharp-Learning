@@ -30,19 +30,15 @@ namespace CustomerManagement.BLTest
 
             //--- Assert
 
-           // Assert.AreEqual(expected, actual);
+            // Assert.AreEqual(expected, actual);
 
             Assert.AreEqual(expected.ProductName, actual.ProductName);
             Assert.AreEqual(expected.Description, actual.Description);
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
         }
 
-
-
-
-
-
     }
+        
 }
 
 

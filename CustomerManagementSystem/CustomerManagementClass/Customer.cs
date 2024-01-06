@@ -1,6 +1,6 @@
 ﻿namespace CustomerManagement.BL
 {
-    public class Customer
+    public class Customer:EntityBase
     {
 
         public Customer():this(0)
@@ -38,7 +38,7 @@
         /// Validate the Customer data
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

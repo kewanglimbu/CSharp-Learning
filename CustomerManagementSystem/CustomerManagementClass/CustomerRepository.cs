@@ -45,7 +45,28 @@ namespace CustomerManagement.BL
         /// <returns></returns>
         public bool Save(Customer customer)
         {
-            return true;
+            var Success = true;
+
+            if (customer.Haschanges)
+            {
+                if (customer.IsValid)
+                {
+                    if (customer.IsNew)
+                    {
+                        //call Insert Stored procedure
+                    }
+                    else
+                    {
+                        //call  an Update Stored procedure
+                    }
+                }
+                else
+                {
+                    Success = false;
+                }
+            }
+
+            return Success;
         }
     }
 }
