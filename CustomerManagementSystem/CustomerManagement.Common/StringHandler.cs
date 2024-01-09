@@ -6,7 +6,7 @@
         public string InsertSpace(string source)
         {
 
-            string result= string.Empty;
+            string result= string.Empty; // " ";
 
             if(!string.IsNullOrWhiteSpace(source)) 
             {
@@ -15,12 +15,13 @@
                 {
                   if(char.IsUpper(letter))
                     {
+                        result = result.Trim();
                         result += " ";
                     }
                     result += letter;
                 }
             }
-
+            result = result.Trim();
             return result;
         }
     }
