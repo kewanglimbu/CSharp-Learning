@@ -1,9 +1,9 @@
 ﻿namespace CustomerManagement.Common
 {
-    public class StringHandler
+    public static class StringHandler
     {
         // this method:  insert a space before each uppercase letter in a given string
-        public string InsertSpace(string source)
+        public static string InsertSpace(string source)
         {
 
             string result= string.Empty; // " ";

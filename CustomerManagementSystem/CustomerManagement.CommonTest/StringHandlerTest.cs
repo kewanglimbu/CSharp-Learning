@@ -27,12 +27,12 @@ namespace CustomerManagement.CommonTest
             //--- Arrange
             var source = "Kewang Limbu";
             var expected = "Kewang Limbu";
-            var handler = new StringHandler(); // create instance of StringHandler class
+           // var handler = new StringHandler(); // create instance of StringHandler class
 
 
             //--- Act
 
-            var actual = handler.InsertSpace(source);
+            var actual = StringHandler.InsertSpace(source);
 
             //--- Assert
 

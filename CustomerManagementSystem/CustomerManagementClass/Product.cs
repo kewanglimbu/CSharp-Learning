@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CustomerManagement.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,10 +20,24 @@ namespace CustomerManagement.BL
             ProductId = productId;
         }
         public int ProductId { get;private  set; }
-        public string ProductName { get; set; }
+       
         public string Description { get; set; }
         public double? CurrentPrice { get; set; }
+        private string _productName;
 
+        public string ProductName
+        {
+            get
+            {
+               
+                return StringHandler.InsertSpace(_productName);
+            }
+
+            set
+            {
+               _productName = value;
+            }
+        }
         public override string ToString() => ProductName;
         
 
