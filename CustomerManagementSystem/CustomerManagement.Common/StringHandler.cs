@@ -2,8 +2,12 @@
 {
     public static class StringHandler
     {
-        // this method:  insert a space before each uppercase letter in a given string
-        public static string InsertSpace(string source)
+        /// <summary>
+        /// this method:  insert a space before each uppercase letter in a given string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static string InsertSpace(this string source)
         {
 
             string result= string.Empty; // " ";

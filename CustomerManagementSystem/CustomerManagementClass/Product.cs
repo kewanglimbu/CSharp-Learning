@@ -30,7 +30,7 @@ namespace CustomerManagement.BL
             get
             {
                
-                return StringHandler.InsertSpace(_productName);
+                return _productName.InsertSpace();
             }
 
             set

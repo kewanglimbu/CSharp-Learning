@@ -32,7 +32,7 @@ namespace CustomerManagement.CommonTest
 
             //--- Act
 
-            var actual = StringHandler.InsertSpace(source);
+            var actual = source.InsertSpace();
 
             //--- Assert
 
