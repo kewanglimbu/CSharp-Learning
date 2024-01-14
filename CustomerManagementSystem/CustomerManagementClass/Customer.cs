@@ -25,15 +25,32 @@ namespace CustomerManagement.BL
         //public string HomeAddress { get; set; }
         //public string WorkAddress { get; set; }
 
-        public string FullName()
-        {
-            return FirstName +","+ LastName;
-        }
 
+        //public string FullName()
+        //{
+        //    return FirstName +","+ LastName;
+        //}
+
+        public string FullName
+        {
+            get
+            {
+                string fullName = LastName;
+                if (!string.IsNullOrWhiteSpace(FirstName))
+                {
+                    if (!string.IsNullOrWhiteSpace(fullName))
+                    {
+                        fullName += ", ";
+                    }
+                    fullName += FirstName;
+                }
+                return fullName;
+            }
+        }
         public static int InstanceCount { get; set; }
 
 
-        public override string ToString() => FullName();
+        public override string ToString() => FullName;
 
 
         public string Log() => $"{CustomerId}  {FullName}  Email: {Email}  Status: {EntityState.ToString()} ";
