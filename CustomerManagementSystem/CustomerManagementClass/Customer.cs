@@ -1,6 +1,8 @@
-﻿namespace CustomerManagement.BL
+﻿using CustomerManagement.Common;
+
+namespace CustomerManagement.BL
 {
-    public class Customer:EntityBase
+    public class Customer:EntityBase,ILoggable
     {
 
         public Customer():this(0)
@@ -32,7 +34,10 @@
 
 
         public override string ToString() => FullName();
-       
+
+
+        public string Log() => $"{CustomerId}  {FullName}  Email: {Email}  Status: {EntityState.ToString()} ";
+
 
         /// <summary>
         /// Validate the Customer data

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CustomerManagement.BL
 {
-    public class Product:EntityBase
+    public class Product:EntityBase,ILoggable
     {
         public Product()
         {
@@ -39,7 +39,8 @@ namespace CustomerManagement.BL
             }
         }
         public override string ToString() => ProductName;
-        
+
+        public string Log() => $"{ProductId}  {ProductName}  Detail: {Description}  Status: {EntityState.ToString()} ";
 
         public override bool Validate()
         {
